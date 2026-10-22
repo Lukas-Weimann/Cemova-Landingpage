@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cemova</title>
+  <meta name="description" content="Cemova – website coming soon.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      --bg: #F4F2ED;     /* Cemova off-white */
+      --ink: #16273A;    /* Cemova navy */
+      --accent: #C97B4A; /* Cemova copper */
+      --muted: #5A6675;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 48px 16px; text-align: center;
+    }
+    .logo { width: min(320px, 70vw); height: auto; display: block; }
+    h1 { margin: 28px 0 8px; font-size: clamp(20px, 3vw, 26px); font-weight: 600; letter-spacing: .01em; }
+    p  { margin: 0 0 36px; color: var(--muted); font-size: 16px; }
+    .video {
+      width: min(960px, 100%);
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 12px 40px rgba(22, 39, 58, .18);
+      background: #000; line-height: 0;
+    }
+    video { width: 100%; height: auto; display: block; }
+    footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+  <img class="logo" src="logo.svg" alt="Cemova">
+
+  <h1>Work in progress</h1>
+  <p>Our new website is on its way.</p>
+
+  <div class="video">
+    <video controls playsinline preload="metadata"
+           controlsList="nodownload" disablePictureInPicture
+           oncontextmenu="return false;">
+      <source src="Cemova-Introduction.mp4" type="video/mp4">
+      Your browser can't play this video.
+    </video>
+  </div>
+
+  <footer>&copy; <span id="y"></span> Cemova</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
